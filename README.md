@@ -1,73 +1,29 @@
-📌 Project Overview
 
-This project builds a Machine Learning regression model to predict the price of diamonds based on their physical and categorical features. The dataset used is the well-known Diamonds dataset, which contains attributes such as carat, cut, color, clarity, and dimensions.
+## Professional Summary
 
-Multiple regression techniques (Linear Regression and Polynomial Regression) were applied and evaluated using performance metrics like RMSE and R² score.
+**Objective**: Predict diamond price using the Seaborn `diamonds` dataset (53,940 records, 10 features).
 
-🎯 Objective
+**Preprocessing**:
+- Renamed `x, y, z` → `length, width, dpt`.
+- No missing values; duplicates removed.
+- Numerical features scaled (`StandardScaler`); categorical features one‑hot encoded (`cut`, `color`, `clarity`).
+- Train/test split: 80%/20%.
 
-The main goal of this project is to:
+**Models Evaluated**:
 
-Analyze relationships between diamond features and price
-Build predictive regression models
-Compare model performance
-Improve prediction accuracy using feature engineering and polynomial transformation
-📊 Dataset Information
+| Model | R² (Test) | RMSE |
+|-------|-----------|------|
+| Linear Regression | **0.9203** | 1102.31 |
+| Polynomial Regression (degree 2) | 0.8590 | 1465.97 |
 
-The dataset includes the following features:
+**Key Findings**:
+- Linear regression outperforms the degree‑2 polynomial model, indicating that adding squared/interaction terms does not improve prediction on this dataset (may introduce overfitting).
+- A linear model with proper scaling and encoding explains ~92% of price variance, with an average prediction error of ~$1102.
 
-carat → Weight of the diamond
-cut → Quality of the cut
-color → Diamond color grade
-clarity → Clarity level
-depth → Total depth percentage
-table → Width of top of diamond relative to widest point
-x, y, z → Physical dimensions (length, width, depth)
-price → Target variable (price of diamond)
+**Recommendation**:
+- Use the linear regression model as baseline.
+- Consider feature engineering (e.g., `volume = length*width*dpt`) and tree‑based models (Random Forest, XGBoost) for potential improvement.
 
-Dataset used:
-Diamonds Dataset
+--- 
 
-⚙️ Technologies Used
-Python 🐍
-Pandas
-NumPy
-Scikit-learn
-Matplotlib / Seaborn
-🧠 Machine Learning Workflow
-Data Cleaning & Preprocessing
-Encoding Categorical Variables
-Feature Scaling using StandardScaler
-Train-Test Split
-Model Training:
-Linear Regression
-Polynomial Regression
-Model Evaluation:
-R² Score
-RMSE
-📈 Model Performance
-
-The models were evaluated using:
-
-RMSE (Root Mean Squared Error) → Measures prediction error
-R² Score → Measures model accuracy
-
-👉 Polynomial Regression improved performance compared to Linear Regression by capturing non-linear relationships in the data.
-
-🚀 Results Summary
-Model	RMSE	R² Score
-Linear Regression	Higher error	Lower accuracy
-Polynomial Regression	Lower error	Better fit
-📌 Key Learnings
-How to preprocess real-world datasets
-Handling categorical + numerical features together
-Difference between Linear and Polynomial Regression
-Importance of evaluation metrics (RMSE, R²)
-Impact of feature engineering on model performance
-📂 Project Structure
-diamond-price-prediction/
-│
-├── diamond_model.py
-├── dataset.csv
-├── README.md
-└── requirements.txt
+Would you like a one‑line conclusion or a code snippet for the best model?
