@@ -1,4 +1,3 @@
-
 ## Professional Summary
 
 **Objective**: Predict diamond price using the Seaborn `diamonds` dataset (53,940 records, 10 features).
@@ -8,7 +7,6 @@
 - No missing values; duplicates removed.
 - Numerical features scaled (`StandardScaler`); categorical features one‑hot encoded (`cut`, `color`, `clarity`).
 - Train/test split: 80%/20%.
-
 **Models Evaluated**:
 
 | Model | R² (Test) | RMSE |
