@@ -1,5 +1,4 @@
 ## Professional Summary
-
 **Objective**: Predict diamond price using the Seaborn `diamonds` dataset (53,940 records, 10 features).
 
 **Preprocessing**:
@@ -17,7 +16,6 @@
 **Key Findings**:
 - Linear regression outperforms the degree‑2 polynomial model, indicating that adding squared/interaction terms does not improve prediction on this dataset (may introduce overfitting).
 - A linear model with proper scaling and encoding explains ~92% of price variance, with an average prediction error of ~$1102.
-
 **Recommendation**:
 - Use the linear regression model as baseline.
 - Consider feature engineering (e.g., `volume = length*width*dpt`) and tree‑based models (Random Forest, XGBoost) for potential improvement.
